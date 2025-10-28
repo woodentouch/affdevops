@@ -34,11 +34,12 @@ jobs:
       - name: Analyze with SonarCloud
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        working-directory: ./backend    
-        run: mvn -B verify sonar:sonar \
-          -Dsonar.projectKey=woodentouch_affdevops \
-          -Dsonar.organization=woodentouch \
-          -Dsonar.host.url=https://sonarcloud.io \
+        working-directory: ./backend
+        run: >
+          mvn -B verify sonar:sonar
+          -Dsonar.projectKey=woodentouch_affdevops
+          -Dsonar.organization=woodentouch
+          -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
 
