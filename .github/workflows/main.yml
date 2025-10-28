@@ -27,4 +27,4 @@ jobs:
 
       # 3️⃣ Étape : Compilation et exécution des tests
       - name: Build and test with Maven
-        run: mvn -B clean verify       # Commande Maven : compile, teste et vérifie le code
+        run: mvn -B -f backend/pom.xml clean verify   # Exécute Maven dans le dossier backend
